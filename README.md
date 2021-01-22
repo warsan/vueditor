@@ -7,6 +7,8 @@ Vueditor
 
 [中文文档](./docs/chinese.md)
 
+[RU](./docs/ru.md)
+
 A wysiwyg editor written in Vue.js and Vuex.js, require Vue.js 2.0.0, Vuex.js 2.0.0 and above.
 
 Browser compatibility: Chrome, Firefox, Safari, IE 9+.
