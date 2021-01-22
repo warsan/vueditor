@@ -30,7 +30,7 @@ Vueditor
 npm install vueditor
 ```
 
-Если вы предпочитаете использовать его с помощью тега сценария, загрузите последний пакет выпуска и добавьте на свою страницу `vueditor.min.js`,` vueditor.min.css`.
+Если вы предпочитаете использовать его с помощью тега сценария, загрузите последний пакет выпуска и добавьте на свою страницу `vueditor.min.js`,` vueditor.min.css`. 
 
 ## Применение
 
@@ -64,7 +64,7 @@ let config = {
 
 Vue.use(Vuex);
 Vue.use(Vueditor, config);
-// create a root instance
+// создать корневой экземпляр
 new Vue({
   el: '#editorContainer'
 });
@@ -80,20 +80,20 @@ new Vue({
 </template>
 ```
 
-Чтобы получить и установить контент, вам нужно приобрести компонент Vueditor, вы можете использовать для этого `$children [index]` или `ref`.
+Чтобы получить и установить контент, вам нужно приобрести компонент Vueditor, вы можете использовать для этого `$children [index]` или `ref`. 
 
 ```javascript
 let parent = new Vue({
   el: '#editor1'
 });
 let editor = parent.$children[0];
-editor.setContent('your content here');
+editor.setContent('ваш контент здесь');
 editor.getContent();
 ```
 
 ### createEditor(selector, config)
 
-Call `createEditor` and pass specific config as parameter respectively for multiple editors in a page. 
+Вызовите `createEditor` и передайте конкретную конфигурацию в качестве параметра соответственно для нескольких редакторов на странице. 
 
 ```javascript
 
@@ -115,17 +115,17 @@ Call `createEditor` and pass specific config as parameter respectively for multi
   });
 ```
 
-The initialized element will be replaced in this case, you can add classList or id to the config for adding styles, the rendered element will have these attributes. `createEditor` returns a vueditor instance, you can set and get content with it:
+В этом случае инициализированный элемент будет заменен, вы можете добавить classList или id в конфигурацию для добавления стилей, визуализированный элемент будет иметь эти атрибуты. `createEditor` возвращает экземпляр vueditor, где вы можете установить и получить содержимое с его помощью:
 
 ```javascript
 let inst = createEditor(...);
-inst.setContent('your content here');
+inst.setContent('ваш контент здесь');
 inst.getContent();
 ```
 
-#### File upload
+#### Файл загружен
 
-You can set `uploadUrl` attribute in config when you initialize an editor, all the upload stuffs will be handled automatically. If you perfer do it yourself or has some authrization to do before uploading, just add a function `upload` to the instance returned by `createEditor`. When an upload action triggered, vueditor will call this function instead of the build-in function. The upload function has two arguments: `obj` refer to the file input element, `callback` requires the uploaded file url as argument for inserting content to the editor, See the example below: 
+Вы можете установить атрибут `uploadUrl` в конфигурации при инициализации редактора, все загружаемые материалы будут обрабатываться автоматически. Если вы хотите сделать это самостоятельно или вам нужно выполнить некоторую авторизацию перед загрузкой, просто добавьте функцию `upload` к экземпляру, возвращаемому `createEditor`. Когда запускается действие загрузки, vueditor вызывает эту функцию вместо встроенной функции. Функция загрузки имеет два аргумента: `obj` относится к элементу ввода файла,` callback` требует URL загруженного файла в качестве аргумента для вставки содержимого в редактор. См. Пример ниже: 
 ```javascript
 editor.upload = function (obj, callback) {
   let formData = new FormData();
@@ -142,11 +142,13 @@ editor.upload = function (obj, callback) {
 }
 ```
 
-### language setting
+### Настройка языка
 
 The editor's default language is English, to set to other language, you will need to translate for your own.
 The `dist/language` folder has an full example inside. Adding a script tag or use `import`, `require` to    
 bring the language object in, then make it an attribute of the config for initialize. See the example below:
+Язык редактора по умолчанию - английский, чтобы установить другой язык, вам нужно будет перевести на свой собственный.
+Внутри папки `dist/language` есть полный пример. Добавьте тег скрипта или используйте `import`, `require` для ввода языкового объекта, а затем сделайте его атрибутом конфигурации для инициализации. См. Пример ниже:
 ```javascript
 Vue.use(Vueditor, {
   ...
@@ -154,22 +156,22 @@ Vue.use(Vueditor, {
 });
 ```
 
-## Options for configuration:
+## Варианты конфигурации:
 
 |          Name         |    Type    |                                                         Description                                                         |
 | --------------------- | ---------- | --------------------------------------------------------------------------------------------------------------------------- |
-| spellcheck            | `Boolean`  | Check spell or not, default is false |
-| lang                  | `Object`   | Interface language, default is English |
-| toolbar               | `Array`   | Buttons on the toolbar, use `|` or `divider` as separator for grouping |
-| fontName              | `Array`   | The font-family select's options, `val` refer to the actual css value, `abbr` refer to the option's text, `abbr` is optional when equals to `val` |
-| fontSize              | `Array`    | The font-size select's options |
-| uploadUrl         | `String`   | File upload url, the return result of this must be a string refer to the uploaded file url, leave it empty will end up with local preview |
-| id                    | `String`   | id for the rendered editor element |
-| classList             | `Array`    | className for the rendered editor element |
-| plugins             | `Array`    | plugins for editor |
+| spellcheck            | `Boolean`  | Проверять орфографию или нет, по умолчанию - false |
+| lang                  | `Object`   | Язык интерфейса, по умолчанию английский |
+| toolbar               | `Array`   | Кнопки на панели инструментов, используйте `|` или `divider` в качестве разделителя для группировки |
+| fontName              | `Array`   | Параметры выбора семейства шрифтов, `val` относятся к фактическому значению css, `abbr` относятся к тексту параметра, `abbr` является необязательным, когда равно `val` |
+| fontSize              | `Array`    | Параметры выбора размера шрифта |
+| uploadUrl         | `String`   | URL-адрес загрузки файла, возвращаемый результат должен быть строкой, относящейся к URL-адресу загруженного файла, оставив его пустым, вы получите локальный предварительный просмотр |
+| id                    | `String`   | id для визуализированного элемента редактора |
+| classList             | `Array`    | className для визуализированного элемента редактора |
+| plugins             | `Array`    | плагины для редактора |
 
 
-Default value of the above fields:
+Значение по умолчанию для вышеуказанных полей:
 
 ```javascript
 {
@@ -193,24 +195,24 @@ Default value of the above fields:
 };
 ```
 
-## Change log
+## Журнал изменений
 
-See [change log](./docs/changelog.md)
+См. [Журнал изменений](./docs/changelog.md)
 
-## Bug confirmed
+## Ошибка подтверждена
 
 ## TODO
 
-- [x] Markdown support
-- [x] Full screen and fixed toolbar features
-- [x] Popup menu position auto adjust
-- [ ] Advanced table options
-- [ ] Code highlight
-- [ ] Plugin support
-- [ ] XSS prevention
-- [ ] Test
+- [x] Поддержка Markdown
+- [x] Полноэкранные и фиксированные функции панели инструментов
+- [x] Автоматическая настройка положения всплывающего меню
+- [ ] Расширенные параметры стола
+- [ ] Выделение кода
+- [ ] Поддержка плагинов
+- [ ] XSS профилактика
+- [ ] Тест
 
-## License
+## Лицензия
 
 [MIT](http://opensource.org/licenses/MIT)
 
