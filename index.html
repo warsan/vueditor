@@ -32,6 +32,7 @@
   <script src="//cdn.bootcss.com/vue/2.0.5/vue.min.js"></script>
   <script src="//cdn.bootcss.com/vuex/2.0.0/vuex.min.js"></script>
   <script src="./dist/language/lang.cn.js"></script>
+  <script src="./dist/language/lang.ru.js"></script>
   <script src="./dist/plugins/emoji.min.js"></script>
   <script src="./dist/script/vueditor.min.js"></script>
   <script>
@@ -46,7 +47,7 @@
           },
           className: 'icon-smile-o'
         },
-        // emoji loaded from script tag, line 35
+        // эмодзи, загруженный из тега скрипта, строка 36
         component: emoji
       }
     ]
@@ -71,7 +72,7 @@
       el: '#editor1'
     })
     let editor = parent.$children[0]
-    editor.setContent(`fill your content here`)
+    editor.setContent(`заполните свой контент здесь`)
   </script>
   <script>
     let inst = Vueditor.createEditor('#editor2', {
@@ -83,7 +84,7 @@
       id: 'someid',
       classList: ['someclass']
     })
-    inst.setContent('fill your content here')
+    inst.setContent('заполните свой контент здесь')
   </script>
 </body>
 </html>
