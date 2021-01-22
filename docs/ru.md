@@ -48,7 +48,7 @@ import Vueditor from 'vueditor'
 
 import 'vueditor/dist/style/vueditor.min.css'
 
-// your config here
+// ваша конфигурация здесь
 let config = {
   toolbar: [
     'removeFormat', 'undo', '|', 'elements', 'fontName', 'fontSize', 'foreColor', 'backColor'
@@ -144,9 +144,6 @@ editor.upload = function (obj, callback) {
 
 ### Настройка языка
 
-The editor's default language is English, to set to other language, you will need to translate for your own.
-The `dist/language` folder has an full example inside. Adding a script tag or use `import`, `require` to    
-bring the language object in, then make it an attribute of the config for initialize. See the example below:
 Язык редактора по умолчанию - английский, чтобы установить другой язык, вам нужно будет перевести на свой собственный.
 Внутри папки `dist/language` есть полный пример. Добавьте тег скрипта или используйте `import`, `require` для ввода языкового объекта, а затем сделайте его атрибутом конфигурации для инициализации. См. Пример ниже:
 ```javascript
