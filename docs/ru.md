@@ -17,7 +17,7 @@ Vueditor
 
 ## Скриншот
 
-![vueditor](./vueditor.gif)
+![vueditor](../vueditor.gif)
 
 ## Особенности
 
