@@ -7,37 +7,39 @@ Vueditor
 
 [中文文档](./docs/chinese.md)
 
-A wysiwyg editor written in Vue.js and Vuex.js, require Vue.js 2.0.0, Vuex.js 2.0.0 and above.
+[RU](./docs/ru.md)
 
-Browser compatibility: Chrome, Firefox, Safari, IE 9+.
+Для редактора wysiwyg, написанного на Vue.js и Vuex.js, требуются Vue.js 2.0.0, Vuex.js 2.0.0 и выше.
 
-Online [DEMO](http://hifarer.github.io/vueditor/)
+Совместимость с браузером: Chrome, Firefox, Safari, IE 9+.
 
-## Screenshot
+В сети [DEMO](http://hifarer.github.io/vueditor/)
+
+## Скриншот
 
 ![vueditor](./vueditor.gif)
 
-## Features
+## Особенности
 
-- Customizable
-- Light weighted, very few dependencies
-- Plugin support
+- Настраиваемый
+- Лёгкий вес, очень мало зависимостей
+- Поддержка плагинов
 
-## Installation
+## Установка
 ```javascript
 npm install vueditor
 ```
 
-If you prefer to use it via script tag, download the last release package and add `vueditor.min.js`, `vueditor.min.css` to your page. 
+Если вы предпочитаете использовать его с помощью тега сценария, загрузите последний пакет выпуска и добавьте на свою страницу `vueditor.min.js`,` vueditor.min.css`.
 
-## Usage
+## Применение
 
 ### Vue.use(Vueditor, config)
 
-Use it in the following cases:
+Используйте его в следующих случаях:
 
-1. Only one editor required
-2. Multiple editors required but shared the same config
+1. Требуется только один редактор
+2. Требуется несколько редакторов, но используется одна и та же конфигурация
 
 ```javascript
 import Vue from 'vue'
@@ -68,7 +70,7 @@ new Vue({
 });
 ```
 
-Then in your vue template somewhere:
+Затем в вашем шаблоне vue где-нибудь:
 ```html
 <template>
   <div>
@@ -78,7 +80,7 @@ Then in your vue template somewhere:
 </template>
 ```
 
-To get and set content you need to acquire the Vueditor component, you can use `$children[index]` or `ref` to do that.
+Чтобы получить и установить контент, вам нужно приобрести компонент Vueditor, вы можете использовать для этого `$children [index]` или `ref`.
 
 ```javascript
 let parent = new Vue({
