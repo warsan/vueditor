@@ -1,7 +1,7 @@
 export default {
   props: ['tagName'],
   computed: {
-    // rect belong to the clicked toolbar element
+    // прямоугольник принадлежит выбранному элементу панели инструментов
     rect: function () {
       return this.$store.state.rect
     },
@@ -13,7 +13,7 @@ export default {
       let offsetLeft = left
       if (this.$el) {
         this.$el.style.display = 'block'
-        // > 0 means the popover menu's right part is not totally visible
+        // > 0 означает, что правая часть всплывающего меню не полностью видна
         if (left + this.$el.offsetWidth - document.documentElement.clientWidth > 0) {
           offsetLeft = left - this.$el.offsetWidth + width
           if (offsetLeft < 0) {
