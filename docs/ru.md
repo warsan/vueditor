@@ -7,7 +7,7 @@ Vueditor
 
 [中文文档](./docs/chinese.md)
 
-[RU](./docs/ru.md)
+[English DOC](../README.md)
 
 Для редактора wysiwyg, написанного на Vue.js и Vuex.js, требуются Vue.js 2.0.0, Vuex.js 2.0.0 и выше.
 
